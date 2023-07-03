@@ -12,11 +12,11 @@ app.use(express.static(__dirname + "/public"));
 
 //mongoose.connect("mongodb+srv://Andrew:andrew12345@todoapp.upy9j.gcp.mongodb.net/ToDoApp?retryWrites=true&w=majority", {useNewUrlParser: true});
 
-const itemSchema = {
+/*const itemSchema = {
     name: "String"
 };
 
-//const Item = mongoose.model("item", itemSchema);
+const Item = mongoose.model("item", itemSchema);
 
 const item1 = new Item({
     name: "Hello! Welcome to the list"
@@ -31,7 +31,7 @@ const item3 = new Item({
 });
 
 const DefaultArray = [item1, item2, item3];
-
+*/
 
 // Main Routes
 app.get("/", function(req, res) {
