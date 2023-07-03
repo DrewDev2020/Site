@@ -1,0 +1,25 @@
+<%- include("header") -%>
+
+<div class="circle big-circle"></div>
+<div class="circle med-circle"></div>
+<div class="circle small-circle"></div>
+<div class="box" id="heading">
+    <h1><%= kindOfDay %>!</h1>
+</div>
+<div class="box">
+    <% newListItem.forEach(element => { %>
+        <form action="/delete" method="POST">
+            <div class="item">
+                <input type="checkbox" name="checkbox" value="<%= element._id %>" onChange="this.form.submit()">
+                <p> <%= element.name %> </p>
+            </div>
+        </form>
+    <% }); %>
+
+    <form class="item" action="/todoapp" method="POST">
+        <input type="text" name="newFood" placeholder="New Item" autocomplete="off">
+        <button type="submit">+</button>
+    </form>
+</div>
+
+<%- include("footer") -%>
