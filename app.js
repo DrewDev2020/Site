@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyP = require("body-parser");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const date = require(__dirname + "/date.js");
 
 const app = express();
@@ -10,13 +10,13 @@ app.set('view engine' , "ejs");
 app.use(bodyP.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
-mongoose.connect("mongodb+srv://Andrew:andrew12345@todoapp.upy9j.gcp.mongodb.net/ToDoApp?retryWrites=true&w=majority", {useNewUrlParser: true});
+//mongoose.connect("mongodb+srv://Andrew:andrew12345@todoapp.upy9j.gcp.mongodb.net/ToDoApp?retryWrites=true&w=majority", {useNewUrlParser: true});
 
 const itemSchema = {
     name: "String"
 };
 
-const Item = mongoose.model("item", itemSchema);
+//const Item = mongoose.model("item", itemSchema);
 
 const item1 = new Item({
     name: "Hello! Welcome to the list"
@@ -46,7 +46,7 @@ app.get("/catto", function(req, res) {
 
 
 // To Do List Routes
-app.get("/todoapp", (req, res) => {
+/*app.get("/todoapp", (req, res) => {
     Item.find({}, function(err, itemsDB){
         if(itemsDB.length === 0) {
             Item.insertMany(DefaultArray, (err) => {
@@ -89,7 +89,7 @@ app.post("/delete", (req, res) => {
     });
     res.redirect("/todoapp");
 });
-
+*/
 
 
 // Server listen
