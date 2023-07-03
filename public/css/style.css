@@ -257,11 +257,12 @@ footer {
 }
 
 .project-image1 {
- width: 100px;
  height: 100px;
  position: absolute;
+ top: 50%;	
  left: 50%;
  transform: translateX(-50%);
+ transform: translateY(-50%);
 }
 
 .project-image:hover {
